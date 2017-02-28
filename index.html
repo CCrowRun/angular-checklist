@@ -2,7 +2,9 @@
 <html ng-app="checklist">
 	<head>
 		<title>Checklist</title>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
 		<script type = "text/javascript" src="app.js"></script>
@@ -13,20 +15,23 @@
 				<h1 class="text-center">Checklist</h1>
 			</header>
 			<div>
-				<form class="form-horizontal" ng-submit="itemCtrl.addItem()">
+				<form class="form-horizontal" ng-submit="itemCtrl.addItem()"">
 					<fieldset class="form-group">
 						<label>New item:</label>
 						<textarea ng-model="itemCtrl.newItem.body" class="form-control" placeholder="Checklist Item" title="Item"></textarea>
-						<button type="submit" class="btn btn-success">Add to List</button>
+						<button type="submit" class="btn btn-primary">Add to List</button>
+          </fieldset>
+          <fieldset>
+          	<ul class="list-group">
+          		<li class="list-group-item" ng-repeat="item in itemCtrl.list" ng-class= "{'disabled': item.complete}">
+          			<label class="checkbox-inline">
+          				<input type="checkbox" ng-model="item.complete">{{item.body}}
+          			</label>
+          			<button type="button" ng-model="itemCtrl.list" class="btn btn-danger btn-sm pull-right" ng-click="itemCtrl.remove($index)">Delete</button>
+          		</li>
+          	</ul>
           </fieldset>
 				</form>
-			</div>
-			<div class = "well">
-				<div class="list-group">
-					<ul>
-						<li ng-repeat="item in itemCtrl.list">{{item.body}}</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</body>
