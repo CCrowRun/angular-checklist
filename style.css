@@ -11,7 +11,7 @@ h1 {
 	border-color: #28B05D;
 }
 
-	.btn-primary:hover {
+	.btn-primary:hover, .btn-primary:active, .btn-primary:active:hover, .btn-primary.focus, .btn-primary:focus {
 		background: #388255;
 		border-color: #388255;
 	}
@@ -20,7 +20,7 @@ h1 {
 	background: #fd746c;
 	border-color: #fd746c;
 }
-	.btn-danger:hover {
+	.btn-danger:hover, .btn-danger:active, .btn-danger:active:hover, .btn-danger.focus, .btn-danger:focus {
 		background: #B0403A;
 		border-color: #B0403A;
 	}
