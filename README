@@ -1,1 +1,6 @@
 README
+
+A checklist application designed to add items, mark them as complete, and delete items.
+
+CSS design utilizes Bootstrap
+Javascript written in AngularJS framework.

@@ -1,18 +1,11 @@
-h1, label {
+/*Text*/
+h1 {
 	font-family: 'Raleway', sans-serif;
+	color: #332C2D;
 }
 
-.container {
-	/*Gradient from https://uigradients.com/# */
-	background: #ECE9E6; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	/*Alignment*/
-  border-radius: 10px;
-  margin-top: 3em;
-  padding: 3em;
-}
 
+/*Buttons*/
 .btn-primary {
 	background: #28B05D;
 	border-color: #28B05D;
@@ -32,6 +25,15 @@ h1, label {
 		border-color: #B0403A;
 	}
 
+/*Backgrounds*/
+
+.container {
+	background: #ECE9E6; /* fallback for old browsers */
+	/*Alignment*/
+	border-radius: 10px;
+	margin-top: 3em;
+	padding: 3em;
+}
 
 body {
 /*Gradient from https://uigradients.com/# */
@@ -39,3 +41,4 @@ background: #fd746c; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #fd746c , #ff9068); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #fd746c , #ff9068); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
