@@ -17,10 +17,10 @@
 				<h1 class="text-center">Checklist</h1><br>
 			</header>
 			<div>
-				<form class="form-horizontal" ng-submit="itemCtrl.addItem()"">
+				<form name="itemEntry" class="form-horizontal" ng-submit="itemEntry.$valid && itemCtrl.addItem()"" novalidate>
 					<!--Entry for new checklist item-->
 					<fieldset class="form-group">
-						<textarea ng-model="itemCtrl.newItem.body" class="form-control" placeholder="New Item" title="Item"></textarea>
+						<textarea ng-model="itemCtrl.newItem.body" class="form-control" placeholder="New Item" title="Item" required></textarea>
 						<button type="submit" class="btn btn-primary">Add to List</button>
           			</fieldset>
           			<fieldset>
